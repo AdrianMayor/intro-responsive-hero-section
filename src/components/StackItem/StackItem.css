@@ -1,0 +1,74 @@
+.menuStack {
+  overflow: hidden;
+  transition: max-height 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  /*   gap: 1rem;
+  padding: 1rem; */
+}
+
+.menuStack.hidden {
+  max-height: 0;
+}
+
+.menuStack.open {
+  max-height: 12rem;
+}
+
+.navMenu h2 {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  text-align: initial;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.menuStackItem {
+  display: flex;
+  gap: 0.8rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.menuStackItem img {
+  width: 1.2rem;
+}
+
+@media (min-width: 1000px) {
+  .menuStack {
+    width: max-content;
+  }
+  .navMenu li:first-child .menuStack.open {
+    position: absolute;
+    left: -70px;
+    top: 37px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px -2px black;
+  }
+
+  .navMenu li:nth-child(2) .menuStack.open {
+    position: absolute;
+    left: -15px;
+    top: 37px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px -2px black;
+  }
+
+  .menuStack.hidden {
+    display: none;
+  }
+
+  .menuStackItem {
+    margin-left: 0;
+  }
+}

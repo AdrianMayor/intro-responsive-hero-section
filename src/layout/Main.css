@@ -1,0 +1,56 @@
+@media (min-width: 1000px) {
+  .heroMain__container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 450px);
+    grid-template-rows: repeat(4, 150px);
+
+    grid-template-areas:
+      "text heroImage"
+      "text heroImage"
+      "button heroImage"
+      "brandSection heroImage";
+
+    margin: 10rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: flex-start;
+    column-gap: 4rem;
+  }
+
+  .heroMain__container--text {
+    grid-area: text;
+    line-height: normal;
+  }
+
+  .heroMain__container--text h2 {
+    text-align: initial;
+    font-size: 3.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .heroMain__container--text p {
+    padding: 0;
+  }
+
+  .heroMain__container img {
+    grid-area: heroImage;
+  }
+
+  .heroMain__container button {
+    grid-area: button;
+    justify-self: start;
+  }
+
+  .brandSection {
+    grid-area: brandSection;
+  }
+
+  .brandSection img {
+    width: auto;
+  }
+
+  .heroMain__container img {
+    width: -webkit-fill-available;
+  }
+}

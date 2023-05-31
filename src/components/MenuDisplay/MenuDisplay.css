@@ -1,0 +1,131 @@
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  width: 65%;
+  z-index: 1;
+
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--mediumGray);
+}
+
+nav.navOpen {
+  transition: transform 0.5s;
+}
+
+nav.navHidden {
+  /* display: none; */
+  /* right: -100vw; */
+  transform: translateX(100vw);
+  transition: transform 0.5s;
+}
+
+.navCloseButtonContainer {
+  width: 100%;
+  padding: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navCloseButtonContainer button {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.navCloseButtonContainer button img {
+  transform: scale(1.1);
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.navMenu li {
+  width: 100%;
+}
+
+.loginSingInButton__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.loginSingInButton__container button {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  width: 80%;
+}
+
+button.loginSingInButton__register {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+@media (min-width: 1000px) {
+  .header__buttonMenu {
+    display: none;
+  }
+  .navCloseButtonContainer {
+    display: none;
+  }
+  nav {
+    position: initial;
+    height: auto;
+    width: auto;
+  }
+
+  nav.navHidden {
+    display: block;
+    transform: unset;
+    transition: none;
+    width: 100%;
+  }
+
+  .navMenu {
+    margin: 0;
+    gap: 3rem;
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navMenu h2 {
+    margin: 0;
+    text-align: initial;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .navMenu li {
+    position: relative;
+    display: flex;
+    width: fit-content;
+  }
+
+  .navMenu li h2 img {
+    object-fit: none;
+  }
+
+  .loginSingInButton__container {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .loginSingInButton__container button {
+    width: fit-content;
+  }
+}

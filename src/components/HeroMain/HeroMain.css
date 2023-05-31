@@ -1,0 +1,40 @@
+.heroMain__container {
+  /*   display: flex;
+  flex-direction: column;
+  gap: 2rem; */
+  margin-bottom: 2rem;
+}
+
+.heroMain__container img {
+  width: 100vw;
+}
+
+.heroMain__container--text {
+  margin-top: 3rem;
+  line-height: 1.6rem;
+}
+
+.heroMain__container--text h2 {
+  font-size: 2.3rem;
+  color: var(--almostBlack);
+}
+
+.heroMain__container--text p {
+  padding: 1.5rem 3.5rem;
+  text-align: justify;
+  color: var(--mediumGray);
+}
+
+.heroMain__container button {
+  padding: 1rem 1.8rem;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--almostBlack);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1000px) {
+  .heroMain__container img {
+  }
+}
